@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+ 
+body{
+    background-color: #dff9fb;
+    
+}
+header{
+    position: fixed;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+   
+    margin: 0 auto;
+    background-color: aliceblue;
+    align-items: center;
+    padding: 15px 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  z-index: 1;
+  
+}
+header div{
+    font-size: 25px;
+    color: rgb(15, 12, 12);
+    font-weight: bolder;
+}
+header nav ul li{
+    position:relative;
+    float: left;
+    padding-left: 20px;
+    
+    
+   
+
+}
+header nav ul li:focus-within > ul,
+header nav ul li:hover > ul{
+    display: inline;
+}
+header nav ul li a{
+    padding: 7px 25px;
+    background-color: rgb(252, 216, 216);
+    color: rgb(13, 4, 4);
+    text-transform: capitalize;
+    display: block;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    text-transform: uppercase;
+   
+}
+header nav ul li a:hover{
+    color: #f7f7f7;
+    background:#30336b ;
+}
+header nav ul li ul{
+    position: absolute;
+    right: 0;
+    width: 200px;
+    display: none;
+   
+  
+
+}
+header nav ul li ul li{
+    width: 100%;
+    padding:0;
+    margin-left:0 ;
+    padding-left: 0px;
+    border-top: #30336b 1px solid;
+}
+/* }
+header nav ul li ul li a{
+    padding: 4px  10px;
+} */
+header nav ul li ul li ul{
+    position: absolute;
+    right:200px ;
+    top: 0;
+    display: none;
+}
+
+header nav ul li ul li:first-child{
+    border-top:none;
+    margin-top: 2px;
+   
+}
+#check{
+    display: none;
+}
+ header label{
+    font-size: 20px;
+    margin-right: 20px;
+    display: none;
+ }
+
+@media ( max-width: 800px){
+    header nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: none;
+        
+    }
+    header label{display: block;}
+    header nav ul li{
+       width: 100%;
+       padding-left: 0px;
+       border-top: 1px solid;
+     
+    }
+    header nav ul li:first-child{
+        border-top: none;
+    }
+    header nav ul li ul{
+        position: relative;
+        width: 100%;
+    }
+    header nav ul li ul li ul{
+        position: relative;
+        width: 100%;
+        left: 0;
+    }
+    
+    #check:checked ~ nav{
+        display: block;
+    }
+}
